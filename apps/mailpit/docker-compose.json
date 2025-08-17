@@ -1,6 +1,6 @@
 {
   "services": {
-    "big-bear-mailpit": {
+    "mailpit": {
       "container_name": "mailpit",
       "image": "axllent/mailpit:v1.27.5",
       "restart": "unless-stopped",
