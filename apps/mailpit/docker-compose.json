@@ -1,7 +1,7 @@
 {
-  "services": {
-    "mailpit": {
-      "container_name": "mailpit",
+  "services": [
+    {
+      "name": "mailpit",
       "image": "axllent/mailpit:v1.27.5",
       "restart": "unless-stopped",
       "ports": [
@@ -40,5 +40,5 @@
         "runtipi.managed": true
       }
     }
-  }
+  ]
 }
