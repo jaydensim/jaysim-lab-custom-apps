@@ -1,0 +1,31 @@
+{
+  "services":
+    [
+      {
+        "name": "big-bear-mailpit",
+        "image": "axllent/mailpit:v1.17",
+        "environment": { "TZ": "UTC" },
+        "internalPort": 8025,
+        "addPorts":
+          [
+            {
+              "containerPort": 1025,
+              "hostPort": 1025,
+              "tcp": true,
+              "udp": false,
+            },
+          ],
+        "volumes":
+          [
+            {
+              "hostPath": "${APP_DATA_DIR}/data/mailpit",
+              "containerPath": "/app/data",
+              "readOnly": false,
+              "shared": false,
+              "private": false,
+            },
+          ],
+        "isMain": true,
+      },
+    ],
+}
